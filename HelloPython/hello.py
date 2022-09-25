@@ -4,8 +4,8 @@
 # типы данных
 # int, float, boolean, str, list, None
 
-a = 123
-b = 1.23
+# a = 123
+# b = 1.23
 
 #value = None
 # print(type (value))
