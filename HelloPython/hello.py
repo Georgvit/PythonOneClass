@@ -219,16 +219,16 @@
 # colors.remove('red') #del colors[0] # удалить элемент
 
 # Функции
-def f(x):
-    return x**2
+# def f(x):
+#     return x**2
 
-def f(x):
-    if x == 1:
-        return 'Целое'
-    elif x == 2.3:
-        return 23
-    else:
-        return
-arg = 2.3
-print(f(arg))
-print(type(f(arg)))
+# def f(x):
+#     if x == 1:
+#         return 'Целое'
+#     elif x == 2.3:
+#         return 23
+#     else:
+#         return
+# arg = 2.3
+# print(f(arg))
+# print(type(f(arg)))
