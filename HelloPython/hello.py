@@ -232,3 +232,10 @@
 # arg = 2.3
 # print(f(arg))
 # print(type(f(arg)))
+
+value = 'Hexlet'
+print(value)
+# Пропускаем обе границы
+value[::-1]  
+# 'telxeH'
+print(value[::-1])
