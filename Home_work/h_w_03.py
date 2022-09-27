@@ -19,6 +19,6 @@ elif coordinate_x < 0 and coordinate_y > 0:
 elif coordinate_x < 0 and coordinate_y < 0:
     print("Номер плоскости координатной сетки - 3")
 elif coordinate_x > 0 and coordinate_y < 0:
-    print("Номер плоскости координатной сетки - 4");
+    print("Номер плоскости координатной сетки - 4")
 else:
     print("Координаты 0-0")
