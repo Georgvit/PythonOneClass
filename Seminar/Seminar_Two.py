@@ -159,4 +159,4 @@ count = 0
 for i in range(len(user_text)):
     if ' ' == user_text[i]:
         count += 1
-print(f'Количество слов в тексте (вторым способом): {count+1}')
+print(f'Количество слов в тексте (первым способом): {count+1}')
