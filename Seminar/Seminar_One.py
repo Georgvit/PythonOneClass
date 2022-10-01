@@ -119,6 +119,6 @@ def f(x):
         return
 
 
-arg = 2.3
+arg = 1
 print(f(arg))
 print(type(f(arg)))
