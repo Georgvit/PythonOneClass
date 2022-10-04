@@ -16,6 +16,8 @@ new_list = []
 for i in range(len(list_number)):
     new_list.append(round(((list_number[i] * 100 % 100) / 100), 2))
 
+
+print(new_list)
 # Разница между максимальным и минимальным значением дробной части элементов
 result = max(new_list) - min(new_list)
 
