@@ -46,7 +46,11 @@ for i in range(length_list):
     if element_a[1] == element_b[1]:
         result = result + ' + ' + str(int(element_a[0]) + int(element_b[0])) + '*' + element_a[1]
     elif element_a[1] != element_b[1]:
-        result = result + ' + ' + element_a[0] + element_a[1] + ' + ' + element_b[0] + element_b[1]
+        result = result + ' + ' + element_a[0] + '*' + element_a[1] + ' + ' + element_b[0] + '*' + element_b[1]
 
 # Вывод результата
 print(f"Сумма многочленов: {result.partition('+ ')[-1]}")
+
+# Запись результата в новый файл
+with open('result_polynomial.txt', 'w+') as file:
+    file.write(result.partition('+ ')[-1])
