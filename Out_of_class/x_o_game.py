@@ -1,6 +1,7 @@
 import random
 
 # Приветствуем игроков
+print('Приветствую вас в игре крестики нолики!')
 name_one_player = input("Введите ваше имя: ")
 print(f'Приветствую тебя, {name_one_player}!')
 name_two_player = input("Введите имя второго игрока: ")
