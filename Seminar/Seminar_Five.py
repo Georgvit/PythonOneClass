@@ -154,3 +154,31 @@
 # x = "привет"
 # test = lambda x: True if ('plr' in x) else False
 # print(test(x))
+# # Решение преподавателя
+# print((lambda x: 'ra' in x)(input()))
+#
+# # Второе решение преподавателя
+# contains = lambda s, sample='ra': sample in s
+# s = input()
+# print(contains(s))
+
+# # НОД Наибольшим общим делителем (НОД) для двух целых чисел
+#
+# a=20
+# b=58
+#
+# # if a < b :
+# #     a, b = b, a
+# #
+# # while b!=0:
+# #     a, b = b, a % b
+# #
+# # print(a)
+#
+# while a != b:
+#     if a > b:
+#         a -= b
+#     else:
+#         b -= a
+#
+# print(a)
