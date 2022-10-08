@@ -17,7 +17,7 @@ import random
 
 # Приветствие и выбор противника
 def choice_user():
-    print\
+    print \
         ('Приветствую вас, игроки! Меня зовут Антон!\n'
          'Правила игры простые: На столе лежит 2021 конфета.\n'
          'За один ход можно забрать не более чем 28 конфет.'
@@ -27,7 +27,14 @@ def choice_user():
          'введите: Y'
          '\nЕсли вы хотите играть вдвоем, введите: N\n')
     if choice_user.lower() == 'y':
-        return 'auto'
+        complexity = int(input('Выберитe уровень сложности\nЛегкий - введите 1\nСложный - введите 2\n'))
+        if complexity == 1:
+            return 'auto'
+        elif complexity == 2:
+            return 'auto_smart'
+        else:
+            print('Не корректный ввод')
+            return choice_user()
     elif choice_user.lower() == 'n':
         return 'hand'
     else:
@@ -69,6 +76,20 @@ def auto_player():
     voice_anton()
     return move
 
+# Ход умного бота Антон
+def smart_auto_player(move_user):
+    fix_number = 28
+    if move_user < fix_number:
+        move = fix_number - move_user
+        print(f'Я возьму {move} конфет(ы)')
+        voice_anton()
+        return move
+    elif move_user == fix_number:
+        move = fix_number
+        print(f'Я возьму {move} конфет(ы)')
+        voice_anton()
+        return move
+
 
 # Ход игрока
 def play():
@@ -104,21 +125,33 @@ def game(choice):
         names_two = hand_play()
     elif choice == 'auto':
         names_two = 'Anton'
+    elif choice == 'auto_smart':
+        names_two = 'Anton'
+        flag = 1
+    game_while(max_of_one_step, candy_bank, names, names_two, choice, flag)
+
+# Цикл игры
+def game_while(max_of_one_step, candy_bank, names, names_two, choice, flag):
     while candy_bank > max_of_one_step:
         if flag == 1:
             flag = play_label(flag, names, names_two)
-            candy_bank = players_move(play(), candy_bank)
+            number_selected_player = play()
+            candy_bank = players_move(number_selected_player, candy_bank)
         else:
             if choice == 'auto':
                 flag = play_label(flag, names, names_two)
                 candy_bank = players_move(auto_player(), candy_bank)
+            elif choice == 'auto_smart':
+                flag = play_label(flag, names, names_two)
+                candy_bank = players_move(smart_auto_player(number_selected_player), candy_bank)
             elif choice == 'hand':
                 flag = play_label(flag, names, names_two)
                 candy_bank = players_move(play(), candy_bank)
-
         print(f'Число конфет на столе: {candy_bank}')
     winner(flag, names, names_two)
-
+# Добрый день, Сергей. Если вы дочитали до этого места - вы реально крутой преподаватель))))
+# Буду благодарен если дадите развернутый комментарий по дз. Для человека без опыта это было бы очень вдохновляюще
+# Спасибо :-)))
 
 # Запуск игры
 game(choice_user())
