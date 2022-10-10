@@ -1,25 +1,61 @@
-num = []
-num_two = ''
+# Создать список, состоящий из кубов нечётных чисел от 1 до 1000 (куб X - третья степень
+# числа X):
+# a.
+# Вычислить сумму тех чисел из этого списка, сумма цифр которых делится нацело на 7.
+# Например, число «19 ^ 3 = 6859» будем включать в сумму, так как 6 + 8 + 5 + 9 = 28 –
+# делится нацело на 7. Внимание: использовать только арифметические операции!
+# b.
+# К каждому элементу списка добавить 17 и заново вычислить сумму тех чисел из этого
+# списка, сумма цифр которых делится нацело на 7.
+# c.
+# * Решить задачу под пунктом b, не создавая новый список.
 
-for i in range(1, 1000):
-    if i % 2 != 0:
-        num.append(i ** 3)
-print(num)
-for j in num:
-    sum = 0
-    for t in str(j):
-        sum += int(t)
-    if sum % 7 == 0:
-        print(sum)
+# num = []
+# num_two = ''
+#
+# for i in range(1, 1000):
+#     if i % 2 != 0:
+#         num.append(i ** 3)
+# print(num)
+# for j in num:
+#     sum = 0
+#     for t in str(j):
+#         sum += int(t)
+#     if sum % 7 == 0:
+#         print(sum)
+#
+# for j in range(len(num)):
+#     num[j] = num[j] + 17
+#
+# print(num)
+#
+# for j in num:
+#     sum = 0
+#     for t in str(j):
+#         sum += int(t)
+#     if sum % 7 == 0:
+#         print(sum)
 
-for j in range(len(num)):
-    num[j] = num[j] + 17
+# Реализовать склонение слова «процент» во фразе «N процентов». Вывести эту фразу на
+# экран отдельной строкой для каждого из чисел в интервале от 1 до 100:
+# 1 процент
+# 2 процента
+# 3 процента
+# 4 процента
+# 5 процентов
+# 6 процентов
+# ...
+# 100 процентов
 
-print(num)
-
-for j in num:
-    sum = 0
-    for t in str(j):
-        sum += int(t)
-    if sum % 7 == 0:
-        print(sum)
+day_sales = ['процент', 'процента', 'процентов']
+for item in range(1, 1001):
+    if item % 100 in (11, 12, 13, 14):
+        print(f'{item} {day_sales[2]}')
+    elif item % 10 == 1:
+        print(f'{item} {day_sales[0]}')
+    elif item % 10 in (2, 3, 4):
+        print(f'{item} {day_sales[1]}')
+    elif item % 10 in (5, 6, 7, 8, 9):
+        print(f'{item} {day_sales[2]}')
+    elif item % 10 == 0:
+        print(f'{item} {day_sales[2]}')
