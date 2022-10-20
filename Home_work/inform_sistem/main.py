@@ -2,27 +2,6 @@
 # с сотрудниками некой компании \ студентами вуза \ учениками школы
 from typing import TextIO
 
-#
-# def show_menu() -> int:
-#     print("\n" + "=" * 20)
-#     print("Выберите необходимое действие")
-#     print("1. Найти сотрудника")
-#     print("2. Сделать выборку сотрудников по должности")
-#     print("3. Сделать выборку сотрудников по зарплате")
-#     print("4. Добавить сотрудника")
-#     print("5. Удалить сотрудника")
-#     print("6. Обновить данные сотрудника")
-#     print("7. Экспортировать данные в формате json")
-#     print("8. Экспортировать данные в формате cmv")
-#     print("9. Закончить работу")
-#     return int(input("Введите номер необходимого действия: "))
-
-#
-# import csv
-# import json
-# from pathlib import Path
-#
-#
 # def read_csv() -> list:
 #     employee = []
 #     with open(Path.cwd() / 'database.csv', 'r', encoding='utf-8') as fin:
@@ -38,14 +17,6 @@ from typing import TextIO
 #     employee.append(temp)
 #     return employee
 #
-#
-# def read_json() -> list:
-#     employee = []
-#     with open(Path.cwd() / 'database02.json', 'r', encoding='utf-8') as fin:
-#         for line in fin:
-#             temp = json.loads(line.strip())
-#     employee.append(temp)
-#     return employee
 #
 #
 #
@@ -73,3 +44,9 @@ from typing import TextIO
 #     if lo <= employee["salary"] <= hi:
 #     result.append(employee)
 #     return result
+
+# Запуск программы
+import view as vid
+import controller as con
+
+con.step(vid.show_menu())

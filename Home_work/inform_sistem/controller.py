@@ -7,14 +7,16 @@ import add_subscriber as adsub
 # Вывод открытого справочника
 def printer(book_list):
     global book
-    ret = []
-    ter = []
-    for i, item in enumerate(book_list):
-        ret.append(''.join(item.strip().split('\n'))[-11:])
-        ter.append(''.join(item.strip().split('\n'))[0:-11])
-    book = dict(zip(ter, ret))
-    for k, v in book.items():
-        print(k, v)
+    book = book_list
+    print(book)
+    # ret = []
+    # ter = []
+    # for i, item in enumerate(book_list):
+    #     ret.append(''.join(item.strip().split('\n'))[-11:])
+    #     ter.append(''.join(item.strip().split('\n'))[0:-11])
+    # book = dict(zip(ter, ret))
+    # for k, v in book.items():
+    #     print(k, v)
     return book
 
 # Функция реакции на выбор пользователя

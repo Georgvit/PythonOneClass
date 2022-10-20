@@ -13,4 +13,3 @@ def show_menu() -> int:
     return int(input("Введите номер необходимого действия: "))
 
 
-show_menu()
