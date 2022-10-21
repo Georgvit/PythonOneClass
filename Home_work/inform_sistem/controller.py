@@ -5,6 +5,7 @@ import view as vie
 import add_employee as adsub
 import selection as selec
 import dell_employee as dellit
+import  update_data as updat
 
 
 # Вывод открытого справочника
@@ -53,6 +54,13 @@ def step(step_next):
     elif step_next == 6:
         try:
             dellit.dell_employee(book)
+            step(vie.show_menu())
+        except:
+            print('Сначала откройте файл')
+            step(vie.show_menu())
+    elif step_next == 7:
+        try:
+            updat.update_data(book)
             step(vie.show_menu())
         except:
             print('Сначала откройте файл')

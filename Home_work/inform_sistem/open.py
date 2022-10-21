@@ -29,5 +29,3 @@ def open_file():
         return employee
     else:
         print('Неверный формат файла!')
-
-

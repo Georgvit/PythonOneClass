@@ -1,4 +1,4 @@
-# Добавления абонента в справочник
+# Добавления абонента в справочник сотрудников
 def add_employee(book):
     temp = {}
     temp["id"] = int(input('Введите ID нового сотрудника: '))
@@ -8,6 +8,6 @@ def add_employee(book):
     temp["phone_number"] = input('Введите телефон нового сотрудника: ')
     temp["salary"] = float(input('Введите зарплату нового сотрудника: '))
     book.append(temp)
-    for i in book:
-        print(i)
+    for item in book:
+        print(item)
     return book
